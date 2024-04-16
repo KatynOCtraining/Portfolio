@@ -4,10 +4,14 @@ body {
 
 .bio_home {
   width: 15%;
+  //   height: 55%;
   position: fixed;
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent noir */
   color: white;
-  padding: 20px;
+  font-size: 12px;
+
+  margin: 0;
+  padding: 0;
 }
