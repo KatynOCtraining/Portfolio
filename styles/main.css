@@ -15,6 +15,16 @@ body {
   padding: 0;
 }
 
+@media only screen and (max-width: 900px) {
+  .bio_home {
+    width: 75%;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+}
 .bold {
   font-weight: bold;
 }
@@ -92,6 +102,14 @@ button:hover {
   border-bottom: 2px solid white;
 }
 
+@media only screen and (max-width: 900px) {
+  .projet-content {
+    width: 100%;
+  }
+  .projet_content_item {
+    width: 100%;
+  }
+}
 .section_title {
   display: flex;
   flex-direction: row;

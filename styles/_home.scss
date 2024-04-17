@@ -15,3 +15,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (max-width: 900px) {
+  .bio_home {
+    width: 75%;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+}

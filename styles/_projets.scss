@@ -38,3 +38,13 @@
   transform: scale(1.5);
   border-bottom: 2px solid white;
 }
+
+@media only screen and (max-width: 900px) {
+  .projet-content {
+    width: 100%;
+  }
+
+  .projet_content_item {
+    width: 100%;
+  }
+}
