@@ -51,6 +51,79 @@ button:hover {
   border-bottom: 2px solid white; /* Appliquer le border bottom au survol */
 }
 
+.section_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 35%;
+  padding-top: 5%;
+}
+
+.infos_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  gap: 20%;
+  margin: 5% 15% 5% 15%;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  opacity: 0.7;
+}
+
+.infos_content_article {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  gap: 2px;
+}
+
+.skills_item {
+  position: relative; /* Position relative pour contenir la barre de compétence et l'étiquette */
+  width: 100%;
+}
+
+.skills_label {
+  color: white;
+  width: 120%;
+  position: absolute; /* Position absolue pour superposer l'étiquette sur la barre de compétence */
+  left: 0; /* Aligner l'étiquette à gauche */
+  text-align: start;
+  margin-left: 15px;
+}
+
+.skills_bar {
+  width: 100px; /* Largeur de la barre de compétence */
+  height: 20px; /* Hauteur de la barre de compétence */
+  background-color: white;
+}
+
+.skills_progress {
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+  float: left;
+}
+
+#prog_part {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 2px;
+}
+#prog_part .skills_progress {
+  float: right;
+}
+#prog_part .skills_label {
+  margin-left: 40px;
+}
+
 #Contact.section {
   padding-top: 10%;
   font-family: "Roboto Mono";
