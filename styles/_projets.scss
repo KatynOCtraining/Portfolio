@@ -1,0 +1,40 @@
+.projet-content {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  text-align: end;
+  align-self: flex-end;
+  width: 50%;
+}
+.projet_content_item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.projet_content_item h3 {
+  font-size: 40px;
+  font-weight: 100;
+  margin: 0;
+  transition: margin-right 1s ease-out;
+}
+
+.projet_content_item a:hover h3 {
+  margin-right: 50%;
+}
+
+.projet_content_item a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 1s ease, transform 1s ease;
+}
+
+.projet_content_item a:hover {
+  font-style: italic;
+  transform: scale(1.5);
+  border-bottom: 2px solid white;
+}
