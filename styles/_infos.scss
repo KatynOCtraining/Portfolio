@@ -72,3 +72,11 @@
     margin-left: 40px;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .infos_content {
+    margin: 0 auto;
+    width: 100%;
+    gap: 100px;
+  }
+}
