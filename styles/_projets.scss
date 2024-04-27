@@ -20,10 +20,8 @@
   font-weight: 100;
   margin: 0;
   transition: margin-right 1s ease-out;
-}
-
-.projet_content_item a:hover h3 {
-  margin-right: 50%;
+  white-space: nowrap; /* Pour empêcher le texte de passer à la ligne */
+  overflow: visible; /* Pour afficher le texte en entier sans le cacher ni le remplacer par des points de suspension */
 }
 
 .projet_content_item a {
@@ -46,5 +44,12 @@
 
   .projet_content_item {
     width: 100%;
+  }
+  .projet_content_item a:hover {
+    transition: none;
+    transform: scale(1);
+  }
+  .projet_content_item h3:hover {
+    transition: none;
   }
 }
