@@ -1,62 +1,96 @@
-// Définir une variable pour stocker les particules
-let particles = [];
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 100,
+      density: {
+        enable: true,
+        value_area: 1000,
+      },
+    },
+    color: {
+      value: ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"],
+    },
 
-// Définir la fonction setup pour l'initialisation
-function setup() {
-  createCanvas(windowWidth, windowHeight); // Créer un canvas qui couvre toute la fenêtre
-  background(0); // Définir l'arrière-plan noir
-
-  // Initialiser une direction cohérente mais aléatoire pour le vent
-  let windDirection = p5.Vector.random2D().mult(0.5);
-
-  // Générer un grand nombre de particules avec la même direction de vent
-  for (let i = 0; i < 500; i++) {
-    particles.push(new Particle(windDirection));
-  }
-}
-
-// Définir la fonction draw pour l'animation
-function draw() {
-  background(0); // Effacer l'arrière-plan à chaque frame
-
-  // Dessiner et mettre à jour chaque particule
-  particles.forEach((particle) => {
-    particle.update();
-    particle.display();
-  });
-}
-
-// Définir la classe Particle pour représenter chaque particule
-class Particle {
-  constructor(windDirection) {
-    // Initialiser la position aléatoire à l'intérieur du canvas
-    this.pos = createVector(random(width), random(height));
-    // Initialiser la vitesse avec la direction du vent
-    this.vel = windDirection.copy();
-  }
-
-  // Mettre à jour la position de la particule
-  update() {
-    // Ajouter la vitesse à la position
-    this.pos.add(this.vel);
-
-    // Si la particule sort du canvas, la ramener à l'intérieur
-    if (
-      this.pos.x < 0 ||
-      this.pos.x > width ||
-      this.pos.y < 0 ||
-      this.pos.y > height
-    ) {
-      this.pos.x = random(width);
-      this.pos.y = random(height);
-    }
-  }
-
-  // Dessiner la particule
-  display() {
-    // Dessiner un petit carré à la position actuelle
-    noStroke();
-    fill(255);
-    square(this.pos.x, this.pos.y, 1); // Réduire la taille des particules
-  }
-}
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#fff",
+      },
+      polygon: {
+        nb_sides: 5,
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 0.6,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 2,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: true,
+      distance: 120,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab",
+      },
+      onclick: {
+        enable: false,
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: {
+          opacity: 1,
+        },
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3,
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4,
+      },
+      push: {
+        particles_nb: 4,
+      },
+      remove: {
+        particles_nb: 2,
+      },
+    },
+  },
+  retina_detect: true,
+});
