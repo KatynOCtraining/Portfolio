@@ -53,6 +53,7 @@ button {
   padding-bottom: 5px;
   border-bottom: 2px solid transparent; /* Définir la bordure par défaut */
   transition: border-bottom 1s ease, transform 1s ease; /* Ajouter une transition fluide à la bordure et à la mise à l'échelle */
+  font-size: 15px;
 }
 
 button:hover {
