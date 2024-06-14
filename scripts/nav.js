@@ -45,7 +45,3 @@ btnContact.addEventListener("click", function () {
 
 // Afficher la section Home par défaut
 showSection(sectionHome);
-
-setTimeout(function () {
-  document.querySelector(".loader").style.display = "none";
-}, 3000);
