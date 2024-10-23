@@ -62,6 +62,24 @@ button:hover {
   border-bottom: 2px solid white; /* Appliquer le border bottom au survol */
 }
 
+.nav-button {
+  background: none; /* Si vous voulez un bouton transparent */
+  border: none; /* Supprimez les bordures pour un look plus moderne */
+  color: grey; /* Couleur par défaut du texte */
+  cursor: pointer;
+  font-size: 16px; /* Taille de police */
+  padding: 10px 20px; /* Espacement autour du texte */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Animation douce */
+}
+.nav-button:hover {
+  color: white; /* Change la couleur au survol */
+}
+
+.nav-button.active {
+  color: white; /* Couleur du texte pour la section active */
+  text-shadow: 0 0 10px white, 0 0 20px white; /* Effet de brillance */
+}
+
 .projet-content {
   display: flex;
   flex-direction: column;
@@ -244,7 +262,6 @@ button:hover {
 }
 /* Carte de visite */
 #Contact.section {
-  display: flex;
   flex-direction: column;
   justify-content: center; /* Centre verticalement */
   align-items: center; /* Centre horizontalement */
@@ -361,7 +378,7 @@ button:hover {
   width: 100%;
   height: 100%;
   background: black;
-  z-index: -1;
+  z-index: -100000;
   position: fixed;
 }
 
@@ -371,6 +388,125 @@ button:hover {
   border: 2px solid white;
   display: block;
   margin: 20px auto;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  width: 60%;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+.carousel-container .carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.carousel-container .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-container .carousel-slide {
+  border-radius: 10px;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.carousel-container .carousel-slide.active {
+  transform: scale(1);
+  opacity: 1;
+}
+.carousel-container .carousel-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: 10px;
+}
+.carousel-container .carousel-slide h3,
+.carousel-container .carousel-slide p,
+.carousel-container .carousel-slide a {
+  z-index: 2;
+  margin: 10px 0;
+  position: relative;
+  color: white;
+}
+.carousel-container .carousel-slide a {
+  text-decoration: none;
+  color: #4a90e2;
+}
+.carousel-container .carousel-slide a:hover {
+  text-decoration: underline;
+}
+.carousel-container .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.carousel-container .carousel-button.prev {
+  left: 10px;
+}
+.carousel-container .carousel-button.next {
+  right: 10px;
+}
+
+.diapo {
+  position: relative;
+}
+
+.diapo_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 10px;
+  z-index: 2;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  z-index: 2000;
+}
+
+.indicator {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: grey;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.indicator.active {
+  background-color: white;
+  box-shadow: 0 0 10px white, 0 0 20px white;
+}
+.indicator:not(.active) {
+  box-shadow: none;
 }
 
 body {

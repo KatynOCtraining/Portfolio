@@ -1,6 +1,13 @@
 {
   "projets": [
     {
+      "nom": "POL - En développement",
+      "lien": "https://katynoctraining.github.io/POL/",
+      "description": "Le site de présentation d'une entreprise de vente de matériel de levage",
+      "screenshot": "./assets/images/pol.png",
+      "details": "Recherche du design et réfléxion autour de l'architecture du site en concertation avec un profesionnel de l'entreprise"
+    },
+    {
       "nom": "Booki",
       "lien": "https://katynoctraining.github.io/booki/",
       "description": "Intégration de la maquette d'un site de réservation de logement",
@@ -30,17 +37,10 @@
     },
     {
       "nom": "LHT - En développement",
-      "lien": "#",
-      "description": "",
-      "screenshot": "",
-      "details": ""
-    },
-    {
-      "nom": "POL - En développement",
-      "lien": "#",
-      "description": "",
-      "screenshot": "",
-      "details": ""
+      "lien": "https://katynoctraining.github.io/guide/",
+      "description": "Appli touristique de la ville du Havre",
+      "screenshot": "./assets/images/lht.png",
+      "details": "Mise en place et manipulations de data dans une interface user-friendly"
     }
   ]
 }

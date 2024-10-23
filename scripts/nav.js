@@ -22,29 +22,43 @@ function hideSections() {
   });
 }
 
+// Fonction pour gérer l'état actif des boutons
+function setActiveButton(activeButton) {
+  const buttons = [btnHome, btnProjets, btnInfos, btnContact];
+  buttons.forEach((button) => {
+    button.classList.remove("active"); // Supprimer la classe active de tous les boutons
+  });
+  activeButton.classList.add("active"); // Ajouter la classe active au bouton cliqué
+}
+
 // Écouteurs d'événements pour les clics sur les boutons de navigation
 btnHome.addEventListener("click", function () {
   hideSections();
   showSection(sectionHome);
+  setActiveButton(btnHome);
 });
 
 btnProjets.addEventListener("click", function () {
   hideSections();
   showSection(sectionProjets);
+  setActiveButton(btnProjets);
 });
 
 btnInfos.addEventListener("click", function () {
   hideSections();
   showSection(sectionInfos);
+  setActiveButton(btnInfos);
 });
 
 btnContact.addEventListener("click", function () {
   hideSections();
   showSection(sectionContact);
+  setActiveButton(btnContact);
 });
 
 // Afficher la section Home par défaut
 showSection(sectionHome);
+setActiveButton(btnHome); // S'assurer que le bouton Home est actif par défaut
 
 //Projets
 document.addEventListener("DOMContentLoaded", function () {

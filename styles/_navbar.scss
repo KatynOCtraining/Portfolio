@@ -24,3 +24,22 @@ button:hover {
   ); /* Utiliser transform pour mettre à l'échelle l'élément */
   border-bottom: 2px solid white; /* Appliquer le border bottom au survol */
 }
+
+.nav-button {
+  background: none; /* Si vous voulez un bouton transparent */
+  border: none; /* Supprimez les bordures pour un look plus moderne */
+  color: grey; /* Couleur par défaut du texte */
+  cursor: pointer;
+  font-size: 16px; /* Taille de police */
+  padding: 10px 20px; /* Espacement autour du texte */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Animation douce */
+
+  &:hover {
+    color: white; /* Change la couleur au survol */
+  }
+}
+
+.nav-button.active {
+  color: white; /* Couleur du texte pour la section active */
+  text-shadow: 0 0 10px white, 0 0 20px white; /* Effet de brillance */
+}

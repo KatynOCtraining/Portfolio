@@ -49,10 +49,10 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
     <h1><img src="./assets/logo png.png" alt="" /></h1>
     <h2><span class="italic thin">Web Developer</span></h2>
     <nav>
-      <button id="btnHome">Home</button>
-      <button id="btnProjets">Projets</button>
-      <button id="btnInfos">Infos</button>
-      <button id="btnContact">Contact</button>
+      <button id="btnHome" class="nav-button">Home</button>
+      <button id="btnProjets" class="nav-button">Projets</button>
+      <button id="btnInfos" class="nav-button">Infos</button>
+      <button id="btnContact" class="nav-button">Contact</button>
     </nav>
 
     <div id="Home" class="section">
@@ -68,6 +68,18 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
           (virtuel ou non) ! 🚀
         </p>
       </div>
+
+      <div class="carousel-container">
+        <button class="carousel-button prev" id="prevBtn">Précédent</button>
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Les projets seront insérés ici dynamiquement -->
+          </div>
+        </div>
+
+        <button class="carousel-button next" id="nextBtn">Suivant</button>
+      </div>
+      <div id="carouselIndicators" class="carousel-indicators"></div>
     </div>
 
     <div id="Projets" class="section">
@@ -228,6 +240,7 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
     </div>
 
     <script src="./scripts/nav.js"></script>
+    <script src="./scripts/carousel.js" defer></script>
     <script src="./scripts/background.js"></script>
   </body>
 </html>
