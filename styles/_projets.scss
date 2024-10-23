@@ -4,38 +4,84 @@
   float: right;
   text-align: end;
   align-self: flex-end;
-  width: 50%;
-}
-.projet_content_item {
   width: 100%;
+  gap: 20px;
+  position: relative;
+}
+
+.projet_content_item {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Couleur blanche semi-transparente */
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Flou pour l'effet verre */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilité Safari */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Légère bordure transparente */
+  overflow: hidden;
+  height: 100px; /* Hauteur compacte par défaut */
+  transition: height 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+}
+
+.projet_content_item:hover {
+  height: 300px; /* Se déplie au hover pour révéler le contenu */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre plus forte au hover */
 }
 
 .projet_content_item h3 {
-  font-size: 40px;
+  font-size: 20px; /* Taille réduite dans la version repliée */
   font-weight: 100;
   margin: 0;
-  transition: margin-right 1s ease-out;
-  white-space: nowrap; /* Pour empêcher le texte de passer à la ligne */
-  overflow: visible; /* Pour afficher le texte en entier sans le cacher ni le remplacer par des points de suspension */
+  white-space: nowrap;
+  overflow: visible;
+  transition: color 0.5s ease;
 }
 
 .projet_content_item a {
   text-decoration: none;
   color: white;
   border-bottom: 2px solid transparent;
-  transition: border-bottom 1s ease, transform 1s ease;
+  transition: border-bottom 0.5s ease;
 }
 
 .projet_content_item a:hover {
   font-style: italic;
-  transform: scale(1.5) translateX(-18%);
+  border-bottom: 2px solid #61dafb;
+}
 
-  border-bottom: 2px solid white;
+.projet_content_item:hover h3 {
+  font-size: 36px; /* Le titre grandit lorsque la carte se déplie */
+  color: #61dafb; /* Change la couleur du titre au hover */
+}
+
+.projet_details {
+  display: none; /* Caché par défaut */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.projet_content_item:hover .projet_details {
+  display: flex; /* Affiché au hover */
+}
+
+.projet_details img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.projet_details p {
+  font-size: 16px;
+  color: #b0b0b0;
+  transition: opacity 0.5s ease;
 }
 
 @media only screen and (max-width: 900px) {
@@ -46,11 +92,12 @@
   .projet_content_item {
     width: 100%;
   }
-  .projet_content_item a:hover {
-    transition: none;
-    transform: scale(1);
+
+  .projet_content_item:hover {
+    height: auto;
   }
-  .projet_content_item h3:hover {
-    transition: none;
+
+  .projet_details img {
+    max-width: 100%;
   }
 }

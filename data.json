@@ -1,0 +1,46 @@
+{
+  "projets": [
+    {
+      "nom": "Booki",
+      "lien": "https://katynoctraining.github.io/booki/",
+      "description": "Intégration de la maquette d'un site de réservation de logement",
+      "screenshot": "./assets/images/booki.png",
+      "details": "Un projet basé sur l'intégration HTML/CSS pour créer un site responsive de réservation de logements."
+    },
+    {
+      "nom": "Dice Game",
+      "lien": "https://katynoctraining.github.io/dicegame/",
+      "description": "Jeu de dés personnalisable",
+      "screenshot": "./assets/images/dicegame.png",
+      "details": "Un jeu où le joueur peut personnaliser les règles et le nombre de dés."
+    },
+    {
+      "nom": "Jeu de la vie",
+      "lien": "https://katynoctraining.github.io/GameOfLife/",
+      "description": "Ma version du jeu de la vie de Conway",
+      "screenshot": "./assets/images/gameoflife.png",
+      "details": "Implémentation du célèbre algorithme de simulation de vie de Conway."
+    },
+    {
+      "nom": "Pokedex",
+      "lien": "#",
+      "description": "Utilisation d'une API pour la réalisation d'un site regroupant des statistiques sur l'univers de Pokemon",
+      "screenshot": "./assets/images/pokedex.png",
+      "details": "Accès aux statistiques et caractéristiques des Pokémons grâce à une API externe."
+    },
+    {
+      "nom": "LHT - En développement",
+      "lien": "#",
+      "description": "",
+      "screenshot": "",
+      "details": ""
+    },
+    {
+      "nom": "POL - En développement",
+      "lien": "#",
+      "description": "",
+      "screenshot": "",
+      "details": ""
+    }
+  ]
+}
