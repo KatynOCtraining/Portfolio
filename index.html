@@ -46,7 +46,7 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
   </head>
   <body>
     <div id="particles-js"></div>
-    <h1><span class="bold">DECKER</span> <span class="thin">Thomas</span></h1>
+    <h1><img src="./assets/logo png.png" alt="" /></h1>
     <h2><span class="italic thin">Web Developer</span></h2>
     <nav>
       <button id="btnHome">Home</button>
@@ -164,21 +164,15 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
     <div id="Contact" class="section">
       <div class="background"></div>
 
-      <div class="outer-div">
-        <div class="inner-div">
-          <div class="front">
-            <div class="front__bkg-photo"></div>
-            <div class="front__face-photo"></div>
-            <div class="front__text">
-              <h3 class="front__text-header">DECKER Thomas</h3>
-              <p class="front__text-para">
-                <i class="fas fa-map-marker-alt front-icons"></i>Le Havre
-              </p>
-
-              <span class="front__text-hover">Comment me trouver</span>
-            </div>
-          </div>
-          <div class="back">
+      <!-- Carte de visite -->
+      <div class="contact-card">
+        <div class="card-content">
+          <div class="profile-photo"></div>
+          <div class="contact-info">
+            <h3>Thomas Decker</h3>
+            <p class="location">
+              <i class="fas fa-map-marker-alt front-icons"></i> Le Havre
+            </p>
             <div class="social-media-wrapper">
               <a
                 href="https://www.linkedin.com/in/thomas-decker-722b7a281/"
@@ -207,6 +201,29 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <div class="contact-form">
+        <form
+          action="mailto:decker.thomas2911@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="tel">Téléphone</label>
+          <input type="tel" id="tel" name="tel" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Envoyer</button>
+        </form>
       </div>
     </div>
 
